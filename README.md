@@ -72,5 +72,4 @@ Include In Field Name | Action/Result
 image | image fields will render the image in the form
 url | lets the user direct enter a URL along with uploading a file
 
-* Note: options are case insensitive
-
+** Note: options are case insensitive*
