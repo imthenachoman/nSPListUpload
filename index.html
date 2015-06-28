@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>nSPListUpload by imthenachoman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">nSPListUpload</h1>
+      <h2 class="project-tagline">nSPListUpload is an easy to use pure HTML WebPart for OOB SharePoint lists that lets you create fields that let users provide URLs or attach/upload files.</h2>
+      <a href="https://github.com/imthenachoman/nSPListUpload" class="btn">View on GitHub</a>
+      <a href="https://github.com/imthenachoman/nSPListUpload/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/imthenachoman/nSPListUpload/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="nsplistupload" class="anchor" href="#nsplistupload" aria-hidden="true"><span class="octicon octicon-link"></span></a>nSPListUpload</h1>
+
+<p><strong>nSPListUpload</strong> is an easy to use pure HTML WebPart for OOB SharePoint lists that lets you create fields that let users provide URLs or attach/upload files.</p>
+
+<h2>
+<a id="table-of-contents" class="anchor" href="#table-of-contents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Table of Contents</h2>
+
+<ol>
+<li><a href="#user-content-overview--features">Overview / Features</a></li>
+<li><a href="#screenshots">Screenshots</a></li>
+<li><a href="#compatibility">Compatibility</a></li>
+<li>
+<a href="#how-to-use">How To Use</a>
+
+<ol>
+<li><a href="#configure-the-list">Configure The List</a></li>
+<li><a href="#add-nsplistupload-to-the-list">Add <strong>nSPListUpload</strong> To The List</a></li>
+<li><a href="#list-configuration-options">List Configuration Options</a></li>
+</ol>
+</li>
+</ol>
+
+<h2>
+<a id="overview--features" class="anchor" href="#overview--features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview / Features</h2>
+
+<p>I needed a list where users would provide the URL to a file or image. I wanted the user to be able to provide either a URL to a file that already exists online <strong>or</strong>  upload a file and then the field would use it's path as the URL.</p>
+
+<p>OOB SharePoint lets you attach a file to an item but there was no way to require it. So the user was left with either manually uploading the file somewhere or attaching it to the list and then using its URL for the field.</p>
+
+<p>This was not as elegant as I liked so <strong>nSPListUpload</strong> was born.</p>
+
+<p>With <strong>nSPListUpload</strong> the <code>NewForm.aspx</code> and <code>EditForm.aspx</code> forms for a list will show a file browse input for the field along with a textarea. If the user selects a file it will attach the file to the list and use the attached file's URL as the field value.</p>
+
+<ul>
+<li>For <code>NewForm.aspx</code>, if the user attaches a file, <strong>nSPListUpload</strong> will do a redirect after the item is saved to find the ID of the item created and then it will update the field values for the attached files.</li>
+<li>For <code>EditForm.aspx</code>, if the user attaches a file, <strong>nSPListUpload</strong> will use the ID of the item to figure out the URL of the attached file.</li>
+</ul>
+
+<h1>
+<a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshots</h1>
+
+<ul>
+<li>
+<p>This is before you use <strong>nSPListUpload</strong>. The "Read More File", "Background Image File", "Posting URL or File", and "Headshot URL or Image File" are the fields I want to change.</p>
+
+<blockquote>
+<p><img src="https://cloud.githubusercontent.com/assets/83817/8394100/a2717fd0-1cf7-11e5-99ea-b54b2fbf20d2.png" alt="before nSPListUpload" title="Before nSPListUpload"></p>
+</blockquote>
+</li>
+<li>
+<p>This is after you use <strong>nSPListUpload</strong>. All the fields with "file" will have a file browse input added. Fields that have URL will also let the user provide a URL directly.</p>
+
+<blockquote>
+<p><img src="https://cloud.githubusercontent.com/assets/83817/8394101/a27cc2a0-1cf7-11e5-90df-f51c924d7e80.png" alt="after nSPListUpload" title="after nSPListUpload"></p>
+</blockquote>
+</li>
+<li>
+<p>This is as you're filling a <code>NewForm.aspx</code> or <code>EditForm.aspx</code>. Images will render in the form.</p>
+
+<blockquote>
+<p><img src="https://cloud.githubusercontent.com/assets/83817/8394102/a27f8580-1cf7-11e5-8dce-4d59debba936.png" alt="filling the form out" title="filling the form out"></p>
+</blockquote>
+</li>
+<li>
+<p>For <code>NewForm.aspx</code> the page will redirect to do some post-processing after the item is saved.</p>
+
+<blockquote>
+<p><img src="https://cloud.githubusercontent.com/assets/83817/8394103/a27fdd50-1cf7-11e5-9017-0532cc7ebe47.png" alt="after item save" title="after item save"></p>
+</blockquote>
+</li>
+<li>
+<p>This is the <code>DispForm.aspx</code>.</p>
+
+<blockquote>
+<p><img src="https://cloud.githubusercontent.com/assets/83817/8394104/a281552c-1cf7-11e5-9c3f-dd94e65f4843.png" alt="DispForm.aspx" title="DispForm.aspx"></p>
+</blockquote>
+</li>
+<li>
+<p>This is the <code>EditForm.aspx</code>. Fields that had attached files will let you delete them.</p>
+
+<blockquote>
+<p><img src="https://cloud.githubusercontent.com/assets/83817/8394105/a282eca2-1cf7-11e5-91d8-47d6e668a3cf.png" alt="enter image description here" title="EditForm.aspx"></p>
+</blockquote>
+</li>
+</ul>
+
+<h2>
+<a id="compatibility" class="anchor" href="#compatibility" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compatibility</h2>
+
+<p>I only have a trial version of <strong>SharePoint 2010 Foundation</strong> on a VM with <strong>IE 11</strong> so that is all I've been able to test on. If anyone tests on other SP versions and/or browsers and is willing to test for me that would be appreciated.</p>
+
+<h2>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How To Use</h2>
+
+<p>To use <strong>nSPListUpload</strong> you need to add fields to a list with specific strings in the field name and then add a WebPart to the <code>NewForm.aspx</code>, <code>EditForm.aspx</code>, and optionally <code>DispForm.aspx</code>.</p>
+
+<h3>
+<a id="configure-the-list" class="anchor" href="#configure-the-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configure The List</h3>
+
+<ol>
+<li>add a field to your list with "file" (case insensitive) in the field name</li>
+<li>check the <a href="#list-configuration-options">table</a> below for other configuration options</li>
+</ol>
+
+<h3>
+<a id="add-nsplistupload-to-the-list" class="anchor" href="#add-nsplistupload-to-the-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add <strong>nSPListUpload</strong> To The List</h3>
+
+<ol>
+<li>download and upload the <code>nSPListUpload.1.0.html</code> or <code>nSPListUpload.1.0.min.html</code> file to your SharePoint site</li>
+<li>add a CEWP Web Part to the <strong>bottom</strong> of <code>NewForm.aspx</code>, <code>EditForm.aspx</code>, and optionally <code>DispForm.aspx</code> and reference</li>
+</ol>
+
+<h3>
+<a id="list-configuration-options" class="anchor" href="#list-configuration-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>List Configuration Options</h3>
+
+<table>
+<thead>
+<tr>
+<th>Include In Field Name</th>
+<th>Action/Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image</td>
+<td>image fields will render the image in the form</td>
+</tr>
+<tr>
+<td>url</td>
+<td>lets the user direct enter a URL along with uploading a file</td>
+</tr>
+</tbody>
+</table>
+
+<p>** Note: options are case insensitive*</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/imthenachoman/nSPListUpload">nSPListUpload</a> is maintained by <a href="https://github.com/imthenachoman">imthenachoman</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
