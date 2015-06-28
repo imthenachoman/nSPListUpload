@@ -47,7 +47,7 @@ With **nSPListUpload** the `NewForm.aspx` and `EditForm.aspx` forms for a list w
 
 ## Compatibility
 
-I only have a trial version of **SharePoint 2010 Foundation** on a VM with **IE 11** so that is all I've been able to test on. If anyone tests on other SP versions and/or browsers and is willing to test for me that would be appreciated.
+I only have a trial version of **SharePoint 2010 Foundation** on a VM with **IE 11** and **Chrome 43** so that is all I've been able to test on. If anyone tests on other SP versions and/or browsers and is willing to test for me that would be appreciated.
 
 ## How To Use
 
