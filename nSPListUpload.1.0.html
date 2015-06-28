@@ -98,7 +98,9 @@ img.nachoImage
                     if(status === "success")
                     {
                         // now we have the ID
-                        var ID = data.responseXML.getElementsByTagName("z:row")[0].getAttribute("ows_ID");
+                        var rows = data.responseXML.getElementsByTagName("z:row");
+                        if(!rows.length) rows = data.responseXML.getElementsByTagName("row");
+                        var ID = rows[0].getAttribute("ows_ID");
                         
                         // get the attach list from the URL paramaters
                         eval("var attachList = " + GetUrlKeyValue("nachoAttachList").replace(/\/Attachments\/\//g, "/Attachments/" + ID + "/"));
