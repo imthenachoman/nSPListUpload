@@ -20,12 +20,15 @@ OOB SharePoint lets you attach a file to an item but there was no way to require
 
 This was not as elegant as I liked so **nSPListUpload** was born.
 
-With **nSPListUpload** the `NewForm.aspx` and `EditForm.aspx` pages for a list will show a file browse input for the field along with a textarea. If the user selects a file it will attach the file to the list and use it's URL as the field value.
+With **nSPListUpload** the `NewForm.aspx` and `EditForm.aspx` forms for a list will show a file browse input for the field along with a textarea. If the user selects a file it will attach the file to the list and use the attached file's URL as the field value.
+
+ - For `NewForm.aspx`, if the user attaches a file, **nSPListUpload** will do a redirect after the item is saved to find the ID of the item created and then it will update the field values for the attached files.
+ - For `EditForm.aspx`, if the user attaches a file, **nSPListUpload** will use the ID of the item to figure out the URL of the attached file.
 
 # Screenshots
 
  - This is before you use **nSPListUpload**. The "Read More File", "Background Image File", "Posting URL or File", and "Headshot URL or Image File" are the fields I want to change.
-> ![before nSPListUpload](https://cloud.githubusercontent.com/assets/83817/8394100/a2717fd0-1cf7-11e5-99ea-b54b2fbf20d2.png "Before nSPListUpload")
+>![before nSPListUpload](https://cloud.githubusercontent.com/assets/83817/8394100/a2717fd0-1cf7-11e5-99ea-b54b2fbf20d2.png "Before nSPListUpload")
 
  - This is after you use **nSPListUpload**. All the fields with "file" will have a file browse input added. Fields that have URL will also let the user provide a URL directly.
 > ![after nSPListUpload](https://cloud.githubusercontent.com/assets/83817/8394101/a27cc2a0-1cf7-11e5-90df-f51c924d7e80.png "after nSPListUpload")
