@@ -28,22 +28,22 @@ With **nSPListUpload** the `NewForm.aspx` and `EditForm.aspx` forms for a list w
 # Screenshots
 
  - This is before you use **nSPListUpload**. The "Read More File", "Background Image File", "Posting URL or File", and "Headshot URL or Image File" are the fields I want to change.
->![before nSPListUpload](https://cloud.githubusercontent.com/assets/83817/8394100/a2717fd0-1cf7-11e5-99ea-b54b2fbf20d2.png "Before nSPListUpload")
+> <img src="https://cloud.githubusercontent.com/assets/83817/8394100/a2717fd0-1cf7-11e5-99ea-b54b2fbf20d2.png" height="100px">
 
  - This is after you use **nSPListUpload**. All the fields with "file" will have a file browse input added. Fields that have URL will also let the user provide a URL directly.
-> ![after nSPListUpload](https://cloud.githubusercontent.com/assets/83817/8394101/a27cc2a0-1cf7-11e5-90df-f51c924d7e80.png "after nSPListUpload")
+> <img src="https://cloud.githubusercontent.com/assets/83817/8394101/a27cc2a0-1cf7-11e5-90df-f51c924d7e80.png" height="100px">
 
  - This is as you're filling a `NewForm.aspx` or `EditForm.aspx`. Images will render in the form.
->![filling the form out](https://cloud.githubusercontent.com/assets/83817/8394102/a27f8580-1cf7-11e5-8dce-4d59debba936.png "filling the form out")
+> <img src="https://cloud.githubusercontent.com/assets/83817/8394102/a27f8580-1cf7-11e5-8dce-4d59debba936.png" height="100px">
 
  - For `NewForm.aspx` the page will redirect to do some post-processing after the item is saved.
->![after item save](https://cloud.githubusercontent.com/assets/83817/8394103/a27fdd50-1cf7-11e5-9017-0532cc7ebe47.png "after item save")
+> <img src="https://cloud.githubusercontent.com/assets/83817/8394103/a27fdd50-1cf7-11e5-9017-0532cc7ebe47.png" height="100px">
 
  - This is the `DispForm.aspx`.
->![DispForm.aspx](https://cloud.githubusercontent.com/assets/83817/8394104/a281552c-1cf7-11e5-9c3f-dd94e65f4843.png "DispForm.aspx")
+> <img src="https://cloud.githubusercontent.com/assets/83817/8394104/a281552c-1cf7-11e5-9c3f-dd94e65f4843.png" height="100px">
 
  - This is the `EditForm.aspx`. Fields that had attached files will let you delete them.
->![enter image description here](https://cloud.githubusercontent.com/assets/83817/8394105/a282eca2-1cf7-11e5-91d8-47d6e668a3cf.png "EditForm.aspx")
+> <img src="https://cloud.githubusercontent.com/assets/83817/8394105/a282eca2-1cf7-11e5-91d8-47d6e668a3cf.png" height="100px">
 
 ## Compatibility
 
