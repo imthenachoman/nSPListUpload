@@ -27,7 +27,7 @@ With **nSPListUpload** the `NewForm.aspx` and `EditForm.aspx` forms for a list w
 
 # Screenshots
 
-Image | Description
+Screenshot | Description
 --- | ---
 <img src="https://cloud.githubusercontent.com/assets/83817/8394100/a2717fd0-1cf7-11e5-99ea-b54b2fbf20d2.png" height="100px"> | This is before you use **nSPListUpload**. The "Read More File", "Background Image File", "Posting URL or File", and "Headshot URL or Image File" are the fields I want to change.
 <img src="https://cloud.githubusercontent.com/assets/83817/8394101/a27cc2a0-1cf7-11e5-90df-f51c924d7e80.png" height="100px"> | This is after you use **nSPListUpload**. All the fields with "file" will have a file browse input added. Fields that have URL will also let the user provide a URL directly.
