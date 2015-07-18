@@ -2,6 +2,8 @@
 
 **nSPListUpload** is an easy to use pure HTML WebPart for OOB SharePoint lists that lets you create fields that let users provide URLs or attach/upload files.
 
+http://imthenachoman.github.io/nSPListUpload/
+
 ## Table of Contents
 
  1. [Overview / Features](#user-content-overview--features)
